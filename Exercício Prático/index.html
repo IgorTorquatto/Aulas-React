@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <script type='text/babel'>
+
+
+         
+      
+       class App extends React.Component{
+
+        constructor(){
+            super()
+            this.state={
+                nome:'Joao',
+                nome2:'Pérola',
+                nome3:'Augusto',
+            }
+            this.mudar=this.mudar.bind(this)
+            this.mudar2=this.mudar2.bind(this)
+            this.mudar3=this.mudar3.bind(this)
+        }
+
+        mudar(){
+            this.setState({nome:'Ribeiro'})
+        }
+        mudar2(){
+            this.setState({nome2:'Rosa'})
+        }
+        mudar3(){
+            this.setState({nome3:'César'})
+        }
+
+           render(){
+               return(
+                   <div>
+                    <h3>Exercício</h3>
+                    <hr/>
+
+                    <p>Nome: {this.state.nome}</p>
+                    <button onClick={this.mudar}>Alternar</button>
+
+                    <p>Nome: {this.state.nome2}</p>
+                    <button onClick={this.mudar2}>Alternar</button>
+
+                    <p>Nome: {this.state.nome3}</p>
+                    <button onClick={this.mudar3}>Alternar</button>
+
+                    </div>
+               )
+           }
+       }
+
+       ReactDOM.render(
+           <App />,document.querySelector('#root')
+       )
+    </script>
+</body>
+</html>
