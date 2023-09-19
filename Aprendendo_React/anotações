@@ -1,0 +1,19 @@
+Início:
+
+Usar o vite para instalar o react e utilizar typescript
+instalar o npm na pasta do projeto react
+npm run dev para rodar o server web
+
+Pastas:
+node modules -> bibliotecas (não mexer)
+public -> imagens, arquivos de som e vídeos do projeto
+src -> códigos do projeto
+
+Instalar Bootstrap:
+npm install bootstrap@latest
+Deletamos todo o conteúdo de index.css e App.css do projeto
+Na importaçãp do css no main.tsx podemos importar o bootstrap:
+import 'bootstrap/dist/css/bootstrap.css'
+
+Elementos React:
+Como cada elemento tem um retorno , podemos usar uma div pra retornar mais coisas. Porém, div é um elemento html e interfere no DOM. Logo podemos usar Fragmentos importando e usando como se fosse uma div. No react atual não se precisa mais importar fragmentos, logo podemos simplesmente usar as tags de abertura e fechamento para limitar essa seção
