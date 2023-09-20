@@ -1,8 +1,11 @@
 import { MouseEvent, useState } from "react";
 
-function ListGroup() {
-  let items = ["São Paulo", "Rio de Janeiro", "Curitiba"];
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
 
+function ListGroup(props: ListGroupProps) {
   //Capturar um evento de mouse
   const handleClick = (event: MouseEvent) => console.log(event);
 
@@ -10,11 +13,11 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
-      {items.length === 0 && <p> Não foi encontrado nenhum item</p>}
+      <h1>{props.heading}</h1>
+      {props.items.length === 0 && <p> Não foi encontrado nenhum item</p>}
 
       <ul className="list-group">
-        {items.map((item, index) => (
+        {props.items.map((item, index) => (
           <li
             className={
               selectedIndex === index
