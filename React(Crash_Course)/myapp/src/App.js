@@ -1,10 +1,9 @@
-import Componente1 from './components/Componente1';
-import 'bootstrap/dist/css/bootstrap.min.css'; //Usando bootstrap 
+import Header from './components/Header';
 
-function App() {
+const App = ()=> {
   return (
     <>
-    <Componente1/>
+    <Header title="Título" />
     </>
   );
 }
